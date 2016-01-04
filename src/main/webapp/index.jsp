@@ -5,9 +5,13 @@
 </head>
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+	String webroot = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <body>
-<%=basePath%>
+	<form action="<%=webroot%>test/getuser">
+		<h1>
+			<input type='submit' value="f**k">
+		</h1>
+	</form>
 </body>
 </html>
