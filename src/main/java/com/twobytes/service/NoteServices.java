@@ -1,4 +1,4 @@
-package main.java.com.twobytes.service;
+package com.twobytes.service;
 
 public class NoteServices {
 

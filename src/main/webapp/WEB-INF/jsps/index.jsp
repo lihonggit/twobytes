@@ -4,7 +4,7 @@
 <head>
 </head>
 <%
-	String path = request.getContextPath();
+	String path = request.getParameter("");
 	String webroot = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <body>

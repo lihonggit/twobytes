@@ -1,4 +1,4 @@
-package main.java.com.twobytes.bean;
+package com.twobytes.bean;
 
 public class Note {
 

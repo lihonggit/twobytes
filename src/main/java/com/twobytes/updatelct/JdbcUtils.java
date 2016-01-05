@@ -1,4 +1,4 @@
-package basic.jdbc;
+package com.twobytes.updatelct;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,7 +41,7 @@ public class JdbcUtils {
 		InputStream fis = null;
 		try {
 			// 以/开头表示基于classpath
-			fis = JdbcUtils.class.getResourceAsStream("/resources/jdbc.properties"); // 加载数据库配置文件到内存中
+			fis = JdbcUtils.class.getResourceAsStream("jdbc.properties"); // 加载数据库配置文件到内存中
 			Properties p = new Properties();
 			p.load(fis);
 			jdbc_driverClassName = p.getProperty("jdbc.driverClassName");// 获取数据库配置文件
