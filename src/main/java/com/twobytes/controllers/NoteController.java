@@ -1,17 +1,12 @@
 package com.twobytes.controllers;
 
-import java.util.List;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.ResponseBody;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.RequestMapping;
-import basic.jdbc.JdbcUtils;
 
 /**
  * 笔记本控制
@@ -25,17 +20,18 @@ public class NoteController {
 	 * 连接数据库
 	 */
 	@RequestMapping(value = "/test/getuser")
+	@ResponseBody
 	public String connectDB(HttpServletRequest request) {
-		String msg = "";
-		List<Map<String, Object>> values = JdbcUtils.findModeResult("select * from system_area limit 10,20", null);
-		for (Map<String, Object> map : values) {
-			for (String key : map.keySet()) {
-				msg += "*" + key + " " + map.get(key) + "<br>";
-			}
-			msg += "<br>";
-		}
-		request.setAttribute("msg", msg);
-		return "msg";
+//		String msg = "";
+//		List<Map<String, Object>> values = JdbcUtils.findModeResult("select * from system_area limit 10,20", null);
+//		for (Map<String, Object> map : values) {
+//			for (String key : map.keySet()) {
+//				msg += "*" + key + " " + map.get(key) + "<br>";
+//			}
+//			msg += "<br>";
+//		}
+//		request.setAttribute("msg", msg);
+		return "<h1>fuck u baby!</h1>";
 	}
 
 }
