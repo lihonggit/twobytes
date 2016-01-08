@@ -1,16 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	String webroot = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";
-
-	String msg = (String) request.getAttribute("msg");
+	String path = request.getContextPath();
+	String webroot = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
-<html>
+<html lang="zh-CN">
 <head>
-<link href="<%=webroot %>resources/system/css/list.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<%=webroot %>resources/commons/js/jquery-1.8.3.min.js"></script>
+<link href="<%=webroot%>resources/common/css/common.css" rel="stylesheet" type="text/css" />
+<style>
+</style>
 </head>
 <body>
-	<%=msg%>
+	<form action="<%=webroot%>test/getuser" method="post">
+		<h1 style="border:1px solid green">
+			<input type='submit' value="f**k">
+		</h1>
+	</form>
+	<p style="font-family: Arial, sans-serif;">你是一个小逗比</p>
+	<p style="">我是一个小逗比</p>
 </body>
 </html>

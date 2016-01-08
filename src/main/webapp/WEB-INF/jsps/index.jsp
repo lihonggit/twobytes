@@ -6,7 +6,8 @@
 %>
 <html>
 <head>
-<link href="<%=webroot %>common.css" rel="stylesheet" type="text/css" />
+<link href="<%=webroot %>resoures/common/css/common.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 	<form action="<%=webroot%>test/getuser" method="post">

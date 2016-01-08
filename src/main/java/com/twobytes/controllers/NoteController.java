@@ -20,8 +20,8 @@ public class NoteController {
 	 * 连接数据库
 	 */
 	@RequestMapping(value = "/test/getuser")
-	@ResponseBody
 	public String connectDB(HttpServletRequest request) {
+		// 访问数据库
 //		String msg = "";
 //		List<Map<String, Object>> values = JdbcUtils.findModeResult("select * from system_area limit 10,20", null);
 //		for (Map<String, Object> map : values) {
@@ -31,7 +31,7 @@ public class NoteController {
 //			msg += "<br>";
 //		}
 //		request.setAttribute("msg", msg);
-		return "<h1>fuck u baby!</h1>";
+		return "msg";
 	}
 
 }
