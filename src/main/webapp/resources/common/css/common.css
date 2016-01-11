@@ -1,3 +1,5 @@
 @CHARSET "UTF-8";
-body{}
-body{width:800px;border:1px solid green}
+body{background-color:#f3f3f3}
+
+.hr-style{width:100%;height:0;border-bottom:1px solid #e9e9e9;}
+.container{padding:0 19.1%;background-color:#f8f8f8}

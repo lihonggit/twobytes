@@ -6,15 +6,17 @@
 %>
 <html>
 <head>
-<link href="<%=webroot %>resoures/common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="<%=webroot%>resources/common/css/common.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
-	<form action="<%=webroot%>test/getuser" method="post">
-		<h1>
-			<input type='submit' value="f**k">
-		</h1>
-	</form>
-	123abc阿百川
+	<div class="container">
+		<form action="<%=webroot%>test/getuser" method="post">
+			<h1>
+				<input type='submit' value="按钮">
+				<div class="hr-style"></div>
+			</h1>
+		</form>
+	</div>
 </body>
 </html>

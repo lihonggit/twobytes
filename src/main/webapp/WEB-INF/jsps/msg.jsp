@@ -11,12 +11,13 @@
 </style>
 </head>
 <body>
+	<hr><hr>
+	<hr><hr>
+	<hr><hr>
+	<hr><hr>
 	<form action="<%=webroot%>test/getuser" method="post">
-		<h1 style="border:1px solid green">
-			<input type='submit' value="f**k">
-		</h1>
 	</form>
 	<p style="font-family: Arial, sans-serif;">你是一个小逗比</p>
-	<p style="">我是一个小逗比</p>
+	<p style="">我是一个小逗比</p><hr>
 </body>
 </html>
