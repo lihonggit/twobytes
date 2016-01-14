@@ -1,10 +1,12 @@
 package com.twobytes.controllers;
 
+import helloword.Log4j;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 //import org.springframework.stereotype.Controller;
 //import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class NoteController {
+	static final Logger logger = Logger.getLogger(NoteController.class);
 	/**
 	 * 连接数据库
 	 */
@@ -31,6 +34,7 @@ public class NoteController {
 //			msg += "<br>";
 //		}
 //		request.setAttribute("msg", msg);
+		logger.info("i'm in testgetuser :)");
 		return "msg";
 	}
 
