@@ -109,7 +109,7 @@ public class JdbcUtils {
 	 * @return
 	 * @throws SQLException
 	 */
-	public static boolean updateByPreparedStatement(String sql, List<Object> params) {
+	public static boolean updateByPreparedStatement(String sql, Object... params) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		boolean flag = false;
@@ -118,9 +118,9 @@ public class JdbcUtils {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(sql);
 			int index = 1;
-			if (params != null && !params.isEmpty()) {
-				for (int i = 0; i < params.size(); i++) {
-					pstmt.setObject(index++, params.get(i));
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					pstmt.setObject(index++, params[i]);
 				}
 			}
 			result = pstmt.executeUpdate();
@@ -141,7 +141,7 @@ public class JdbcUtils {
 	 * @return
 	 * @throws SQLException
 	 */
-	public static Map<String, Object> findSimpleResult(String sql, List<Object> params) {
+	public static Map<String, Object> findSimpleResult(String sql, Object... params) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet resultSet = null;
@@ -150,9 +150,9 @@ public class JdbcUtils {
 		try {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(sql);
-			if (params != null && !params.isEmpty()) {
-				for (int i = 0; i < params.size(); i++) {
-					pstmt.setObject(index++, params.get(i));
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					pstmt.setObject(index++, params[i]);
 				}
 			}
 			resultSet = pstmt.executeQuery();// 返回查询结果
@@ -184,7 +184,7 @@ public class JdbcUtils {
 	 * @return
 	 * @throws SQLException
 	 */
-	public static List<Map<String, Object>> findModeResult(String sql, List<Object> params) {
+	public static List<Map<String, Object>> findModeResult(String sql, Object... params) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet resultSet = null;
@@ -193,9 +193,9 @@ public class JdbcUtils {
 		try {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(sql);
-			if (params != null && !params.isEmpty()) {
-				for (int i = 0; i < params.size(); i++) {
-					pstmt.setObject(index++, params.get(i));
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					pstmt.setObject(index++, params[i]);
 				}
 			}
 			resultSet = pstmt.executeQuery();
@@ -230,7 +230,7 @@ public class JdbcUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static <T> T findSimpleRefResult(String sql, List<Object> params, Class<T> cls) {
+	public static <T> T findSimpleRefResult(String sql, Class<T> cls, Object... params) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet resultSet = null;
@@ -239,9 +239,9 @@ public class JdbcUtils {
 		try {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(sql);
-			if (params != null && !params.isEmpty()) {
-				for (int i = 0; i < params.size(); i++) {
-					pstmt.setObject(index++, params.get(i));
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					pstmt.setObject(index++, params[i]);
 				}
 			}
 			resultSet = pstmt.executeQuery();
@@ -279,7 +279,7 @@ public class JdbcUtils {
 	 * @return
 	 * @throws Exception
 	 */
-	public static <T> List<T> findMoreRefResult(String sql, List<Object> params, Class<T> cls) {
+	public static <T> List<T> findMoreRefResult(String sql, Class<T> cls, Object... params) {
 		Connection connection = null;
 		PreparedStatement pstmt = null;
 		ResultSet resultSet = null;
@@ -288,9 +288,9 @@ public class JdbcUtils {
 		try {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(sql);
-			if (params != null && !params.isEmpty()) {
-				for (int i = 0; i < params.size(); i++) {
-					pstmt.setObject(index++, params.get(i));
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					pstmt.setObject(index++, params[i]);
 				}
 			}
 			resultSet = pstmt.executeQuery();

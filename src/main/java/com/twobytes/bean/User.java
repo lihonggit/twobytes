@@ -12,7 +12,7 @@ public class User implements Serializable {
 	private static final long serialVersionUID = -2088477628142208570L;
 	/* 账号信息 */
 	// id
-	private String id;
+	private Integer id;
 	// 邮箱
 	private String email;
 	// 昵称
@@ -34,15 +34,15 @@ public class User implements Serializable {
 
 	/* 记录信息 */
 	// 加入时间
-	private String jointime;
+	private String createtime;
 	// 最后登录
 	private String lastlogin;
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -110,12 +110,12 @@ public class User implements Serializable {
 		this.constellation = constellation;
 	}
 
-	public String getJointime() {
-		return jointime;
+	public String getCreatetime() {
+		return createtime;
 	}
 
-	public void setJointime(String jointime) {
-		this.jointime = jointime;
+	public void setCreatetime(String createtime) {
+		this.createtime = createtime;
 	}
 
 	public String getLastlogin() {

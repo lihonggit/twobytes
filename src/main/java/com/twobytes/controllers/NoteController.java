@@ -1,14 +1,7 @@
 package com.twobytes.controllers;
 
-import helloword.Log4j;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.stereotype.Controller;
-//import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 笔记本控制
@@ -19,23 +12,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class NoteController {
 	static final Logger logger = Logger.getLogger(NoteController.class);
-	/**
-	 * 连接数据库
-	 */
-	@RequestMapping(value = "/test/getuser")
-	public String connectDB(HttpServletRequest request) {
-		// 访问数据库
-//		String msg = "";
-//		List<Map<String, Object>> values = JdbcUtils.findModeResult("select * from system_area limit 10,20", null);
-//		for (Map<String, Object> map : values) {
-//			for (String key : map.keySet()) {
-//				msg += "*" + key + " " + map.get(key) + "<br>";
-//			}
-//			msg += "<br>";
-//		}
-//		request.setAttribute("msg", msg);
-		logger.info("i'm in testgetuser :)");
-		return "msg";
-	}
 
 }
