@@ -18,7 +18,7 @@
 		<param-name>log4jConfigLocation</param-name>
 		<param-value>/WEB-INF/classes/resources/log4j.properties</param-value>
 	</context-param>
-	
+
 	<!-- spring监听器 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -30,7 +30,7 @@
 
 	<!-- 核心控制器 -->
 	<servlet>
-		<servlet-name>excel</servlet-name>
+		<servlet-name>tbsvlt</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
@@ -39,9 +39,25 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>excel</servlet-name>
+		<servlet-name>tbsvlt</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+	<!-- 登录过滤器 -->
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>basic.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 错误页面 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsps/404.jsp</location>
+	</error-page>
 
 	<!-- 编码过滤器 解决中文乱码 先不用嘻嘻 -->
 	<!-- <filter> <filter-name>encodingFilter</filter-name> <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 

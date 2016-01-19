@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.today-node {
+	width:280px;
+	height:120px;
+	max-width:520px;
+	max-height:240px;
+	border:0px;
+}

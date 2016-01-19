@@ -12,11 +12,11 @@ public class User implements Serializable {
 	private static final long serialVersionUID = -2088477628142208570L;
 	/* 账号信息 */
 	// id
-	private Integer id;
+	private String id;
 	// 邮箱
 	private String email;
 	// 昵称
-	private String nickname;
+	private String nickName;
 	// 密码
 	private String password;
 
@@ -34,15 +34,15 @@ public class User implements Serializable {
 
 	/* 记录信息 */
 	// 加入时间
-	private String createtime;
+	private String creaTetime;
 	// 最后登录
-	private String lastlogin;
+	private String lastLogin;
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -54,12 +54,12 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public String getNickname() {
-		return nickname;
+	public String getNickName() {
+		return nickName;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
 	}
 
 	public String getPassword() {
@@ -86,20 +86,20 @@ public class User implements Serializable {
 		this.sex = sex;
 	}
 
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
 	public String getCity() {
 		return city;
 	}
 
 	public void setCity(String city) {
 		this.city = city;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 	public String getConstellation() {
@@ -110,19 +110,20 @@ public class User implements Serializable {
 		this.constellation = constellation;
 	}
 
-	public String getCreatetime() {
-		return createtime;
+	public String getCreaTetime() {
+		return creaTetime;
 	}
 
-	public void setCreatetime(String createtime) {
-		this.createtime = createtime;
+	public void setCreaTetime(String creaTetime) {
+		this.creaTetime = creaTetime;
 	}
 
-	public String getLastlogin() {
-		return lastlogin;
+	public String getLastLogin() {
+		return lastLogin;
 	}
 
-	public void setLastlogin(String lastlogin) {
-		this.lastlogin = lastlogin;
+	public void setLastLogin(String lastLogin) {
+		this.lastLogin = lastLogin;
 	}
+
 }

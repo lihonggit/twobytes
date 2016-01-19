@@ -1,7 +1,6 @@
 package com.twobytes.service;
 
 import java.util.List;
-import java.util.Map;
 
 import com.twobytes.bean.Note;
 
@@ -18,10 +17,10 @@ public interface NoteServices {
 	 * @param userId
 	 * @return
 	 */
-	public Note getLastNote(String userId) throws Exception;
+	public Note getLastNote(String userId);
 
 	/**
-	 * 获得所有日志
+	 * 获得所有日志，不包含今天的
 	 * 
 	 * @param userId
 	 * @return
@@ -35,5 +34,12 @@ public interface NoteServices {
 	 * @return
 	 */
 	public boolean saveNote(Note note);
+	
+	/**
+	 * 通过id得到日记对象
+	 * @param id
+	 * @return
+	 */
+	public Note getNoteById(String id);
 
 }

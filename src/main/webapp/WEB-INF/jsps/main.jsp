@@ -7,15 +7,29 @@
 <html>
 <head>
 <link href="<%=webroot%>/resources/common/css/common.css" rel="stylesheet" type="text/css" />
+<link href="<%=webroot%>/resources/system/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="container">
-		<%
-			List<Note> notes = (List<Note>)request.getAttribute("notes");
-			for(Note note : notes) {
-				out.println(note.getContent() + " - " + note.getCreatetime() + "<br>");
-			}
-		%>
+		<form action="<%=webroot%>/note/save" method="post">
+			<div class="notes">
+				<%
+					List<Note> notes = (List<Note>) request.getAttribute("notes");
+					out.print(notes.size());
+					for (Note note : notes) {
+						out.print(note.getContent() + " - " + note.getCreateTime() + "<br>");
+					}
+					Note yestoday = (Note) request.getAttribute("yestoday");
+				%>
+			</div>
+			<div class="note">
+				<input type="hidden" name="id" value="<%=yestoday.getId()%>">
+				<textarea class="today-note" name="content"><%=yestoday.getContent() + yestoday.getUpdateTime()%></textarea>
+			</div>
+			<div class="buttons">
+				<input type="submit" value="就这样">
+			</div>
+		</form>
 	</div>
 </body>
 </html>

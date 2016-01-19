@@ -1,11 +1,14 @@
 package com.twobytes.controllers;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import basic.utils.SysConst;
 
 import com.twobytes.bean.User;
 import com.twobytes.service.NoteServices;
@@ -25,7 +28,7 @@ public class UserController {
 	 * @return
 	 */
 	@RequestMapping("/user/login")
-	public String login(HttpServletRequest request) {
+	public String login(HttpServletRequest request, HttpSession session) {
 		// 得到的数据
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -33,13 +36,19 @@ public class UserController {
 		if (user == null) {
 			request.setAttribute("reqmsg", "你的账号并没有登录！");
 			return "login";
+		} else {
+			// 保存到session
+			user.setPassword("");
+			session.setAttribute("cuser", user);
+			return "redirect:/user/main";
 		}
-		return "redirect:/user/main/"+user.getId();
 	}
-	
-	@RequestMapping(value = "/user/main/{id}")
-	public String userMain(HttpServletRequest request,@PathVariable String id) {
-		request.setAttribute("notes", noteServices.getNodes(id));
+
+	@RequestMapping(value = "/user/main")
+	public String userMain(HttpServletRequest request, HttpSession session) {
+		User currUser = (User) session.getAttribute(SysConst.USER);
+		request.setAttribute("notes", noteServices.getNodes(currUser.getId()));
+		request.setAttribute("yestoday", noteServices.getLastNote(currUser.getId()));
 		return "main";
 	}
 

@@ -9,30 +9,30 @@ import java.io.Serializable;
 public class Note implements Serializable {
 	private static final long serialVersionUID = -1261022547516289155L;
 	// id
-	private Integer id;
+	private String id;
 	// 记录人id
-	private Integer userid;
+	private String userId;
 	// 内容
 	private String content;
 	// 创建时间
-	private String createtime;
+	private String createTime;
 	// 更新时间
-	private String updatetime;
+	private String updateTime;
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public Integer getUserid() {
-		return userid;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUserid(Integer userid) {
-		this.userid = userid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
 	public String getContent() {
@@ -43,20 +43,20 @@ public class Note implements Serializable {
 		this.content = content;
 	}
 
-	public String getCreatetime() {
-		return createtime;
+	public String getCreateTime() {
+		return createTime;
 	}
 
-	public void setCreatetime(String createtime) {
-		this.createtime = createtime;
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
 	}
 
-	public String getUpdatetime() {
-		return updatetime;
+	public String getUpdateTime() {
+		return updateTime;
 	}
 
-	public void setUpdatetime(String updatetime) {
-		this.updatetime = updatetime;
+	public void setUpdateTime(String updateTime) {
+		this.updateTime = updateTime;
 	}
 
 }

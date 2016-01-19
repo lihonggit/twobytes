@@ -23,9 +23,20 @@ public class TimeUtils {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(PATTERN_DEFAULT);
 		return simpleDateFormat.format(System.currentTimeMillis());
 	}
-	
+
+	/**
+	 * 当前系统时间，格式为yyyy-MM-dd
+	 * 
+	 * @return
+	 */
+	public static String getCurrentDay() {
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(PATTERN_DAY);
+		return simpleDateFormat.format(System.currentTimeMillis());
+	}
+
 	/**
 	 * 获取传入时间和系统时间的天数差
+	 * 
 	 * @param calcTime 传入时间
 	 * @return 相差天数，当结果为负时，表示系统时间较小
 	 * @throws ParseException
