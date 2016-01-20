@@ -39,7 +39,7 @@ public class UserController {
 		} else {
 			// 保存到session
 			user.setPassword("");
-			session.setAttribute("cuser", user);
+			session.setAttribute(SysConst.USER, user);
 			return "redirect:/user/main";
 		}
 	}

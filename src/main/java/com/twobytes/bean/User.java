@@ -34,7 +34,7 @@ public class User implements Serializable {
 
 	/* 记录信息 */
 	// 加入时间
-	private String creaTetime;
+	private String createTime;
 	// 最后登录
 	private String lastLogin;
 
@@ -110,12 +110,12 @@ public class User implements Serializable {
 		this.constellation = constellation;
 	}
 
-	public String getCreaTetime() {
-		return creaTetime;
+	public String getCreateTime() {
+		return createTime;
 	}
 
-	public void setCreaTetime(String creaTetime) {
-		this.creaTetime = creaTetime;
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
 	}
 
 	public String getLastLogin() {
