@@ -1,11 +1,18 @@
 @CHARSET "UTF-8";
 
 * {
+	margin: 0px;
+	padding: 0px;
 	font: 12px/1.5em Helvetica, Arial, sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body {
+html,body {
 	background-color: #f1f1f1;
+	width:100%;
+	min-width: 300px;
 }
 
 .hr-style {
@@ -15,7 +22,6 @@ body {
 }
 
 .container {
-	padding: 0 19.1%;
 	background-color: #f8f8f8
 }
 
@@ -38,7 +44,7 @@ body {
 }
 
 a:visited {
-	color:blue;
+	color: blue;
 	text-decoration: none;
 }
 
@@ -48,4 +54,13 @@ a:visited {
 
 .f-r {
 	float: right;
+}
+
+.clb {
+	clear:both;
+}
+
+/* common class */
+.time {
+	font-size: 10px !important;
 }
