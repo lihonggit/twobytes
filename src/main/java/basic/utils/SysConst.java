@@ -2,11 +2,13 @@ package basic.utils;
 
 /**
  * 系统常量
- * @author 成都易科远见有限公司
- *
+ * 
  */
 public interface SysConst {
-	// 当前用户保存用名
-	public static final String USER = "CURR_USER";
+	// 系统页面类型
+	public static final String SYS_PAGE_TYPE = ".jsp";
+	// 用户对象在session中的名称
+	public static final String USER = "user";
 	public static final String USER_PATH = "/user";
+	public static final String USER_LOGIN_PATH = "/user/login";
 }
