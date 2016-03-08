@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+	<!-- 满足/*的页面，将被decorator路径中的页面所装饰 -->
+	<mapping path="/*" decorator="/WEB-INF/jsps/decorators/decoratorDft.jsp" />
+
+	<!-- 满足/exclude.jsp*的页面，将被排除，不被装饰 -->
+	<mapping path="/exclude.jsp*" exclue="true" />
+</sitemesh>
